@@ -9,32 +9,35 @@ public class Average {
         int a;
         int b;
 
-        System.out.println("Вычисление среднего арифметического диапазона чисел");
         System.out.println("Введите начальное значение диапазона: ");
         a = scanner.nextInt();
-        int a1 = a; // сохранение начального значения
+        int startValue = a; // сохранение начального значения
         System.out.println("Введите конечное значение диапазона: ");
         b = scanner.nextInt();
 
-        int k = 0; // количество всех чисел диапазона
-        int sum = 0; // сумма всех чисел диапазона//
-        int k2 = 0; // количество всех чисел диапазона
+        int count = 0; // количество всех чисел диапазона
+        int sum = 0; // сумма всех чисел диапазона
+        int count2 = 0; // количество всех чисел диапазона
         int sum2 = 0; // сумма всех чисел диапазона
 
-        do {
+        while (a <= b) {
             sum += a;
             if (a % 2 == 0) {
                 sum2 += a;
-                ++k2;
+                ++count2;
             }
             ++a;
-            ++k;
-        } while (a <= b);
+            ++count;
+        }
 
-        double average = (double) sum / k;
-        double average2 = (double) sum2 / k2;
+        double average = (double) sum / count;
+        System.out.println("Среднее арифметическое чисел от " + startValue + " до " + b + " равно " + average);
 
-        System.out.println("Среднее арифметическое чисел от " + a1 + " до " + b + " равно " + average);
-        System.out.println("Среднее арифметическое четных чисел от " + a1 + " до " + b + " равно " + average2);
+        if (count2 == 0) {
+            System.out.println("Среднее арифметическое четных чисел вычислить не возможно, так как в диапазоне нет четных чисел");
+        } else {
+            double average2 = (double) sum2 / count2;
+            System.out.println("Среднее арифметическое четных чисел от " + startValue + " до " + b + " равно " + average2);
+        }
     }
 }
