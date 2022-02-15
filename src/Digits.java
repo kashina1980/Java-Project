@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-public class Digital {
+public class Digits {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите целое число: ");
         int n = scanner.nextInt();
-        n = Math.abs(n);  // преобразование в положительное число
+        n = Math.abs(n);
         int digit;
 
-        int sum = 0; // сумма всех цифр числа//
-        int max = 0; // максимальная цифра
-        int sum1 = 0; // сумма нечетных цифр числа
+        int sum = 0;
+        int max = 0;
+        int sum1 = 0;
 
         while (n > 0) {
             digit = n % 10;

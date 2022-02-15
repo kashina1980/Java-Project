@@ -11,14 +11,14 @@ public class Average {
 
         System.out.println("Введите начальное значение диапазона: ");
         a = scanner.nextInt();
-        int startValue = a; // сохранение начального значения
+        int startValue = a;
         System.out.println("Введите конечное значение диапазона: ");
         b = scanner.nextInt();
 
-        int count = 0; // количество всех чисел диапазона
-        int sum = 0; // сумма всех чисел диапазона
-        int count2 = 0; // количество всех чисел диапазона
-        int sum2 = 0; // сумма всех чисел диапазона
+        int count = 0;
+        int sum = 0;
+        int count2 = 0;
+        int sum2 = 0;
 
         while (a <= b) {
             sum += a;
